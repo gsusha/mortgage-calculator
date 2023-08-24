@@ -1,26 +1,42 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="wrapper">
+    <MortgageCalculator />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MortgageCalculator from "@/components/MortgageCalculator.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MortgageCalculator
   }
 }
 </script>
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  background: #EDEEF6;
+  color: #20253C;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    @media(max-width: 475px) {
+      padding: 40px 20px;
+    }
+  }
 }
 </style>
